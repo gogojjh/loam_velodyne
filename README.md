@@ -36,3 +36,21 @@ roslaunch velodyne_pointcloud VLP16_points.launch pcap:="/home/laboshinl/Downloa
 [Quantifying Aerial LiDAR Accuracy of LOAM for Civil Engineering Applications.](https://ceen.et.byu.edu/sites/default/files/snrprojects/wolfe_derek.pdf) Derek Anthony Wolfe
 
 [ROS & Loam_velodyne](https://ishiguro440.wordpress.com/2016/04/05/%E5%82%99%E5%BF%98%E9%8C%B2%E3%80%80ros-loam_velodyne/) 
+
+
+### in git
+To run the program, users need to download the code from GitHub, or follow the link on the top of this page. The program can be started by ROS launch file (available in the downloaded folder), which starts four nodes and rivz:
+```
+roslaunch loam_velodyne.launch
+```
+
+Datasets are available for download from here, or at the bottom of this page. Please make sure the data files are for the Velodyne version (not back and forth spin or continuous spin version). With the program running (from the launch file), users can play the data file:
+```
+rosbag play data_file_name.bag
+```
+
+Note that if a slow computer is used, users can try to play the data file at a low speed, e.g. play the data file at half speed:
+```
+rosbag play data_file_name.bag -r 0.5
+```
+
